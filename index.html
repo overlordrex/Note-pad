@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notepad</title>
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="style.css">
+     <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+   <header>
+       <div class="wrapper">
+           <h2>NOTEPAD</h2>
+       </div>
+   </header>
+
+   <!-- Add/back buttom html -->
+   <div class="add-btn"><i class="fas fa-plus"></i></div> 
+   <!-- Add/back buttom html -->   
+
+   <section class="note-container"></section>
+        
+    <section class="notepad-container">
+       <form  class="notepad">
+           <div>
+               <textarea type="text" id="title" maxlength="50" placeholder="title"></textarea>
+           </div>
+           <div>
+               <textarea  id="content" placeholder="write note here"></textarea>
+           </div>
+       </form>
+       <div class="controls">
+           <div class="control back">
+               <i class="fas fa-arrow-left"></i>
+               <h6>back</h6>
+           </div>
+    
+           <div class="control font">
+               <i class="fas fa-font"></i>
+               <h6>font</h6>
+           </div>
+    
+           <div class="control clear">
+               <i class="fas fa-eraser"></i>
+               <h6>clear</h6>
+           </div>
+    
+           <div class="control save">
+               <i class="fas fa-check"></i>
+               <h6>save</h6>
+           </div>
+       </div>
+   </section>
+
+   <script src="note.js"></script>
+</body>
+</html>

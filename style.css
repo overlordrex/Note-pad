@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+*,*::after,*::before{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font1:'Varela Round', sans-serif;
+    --font2:'Caveat', cursive;
+}
+
+body{
+    font-family: var(--font1);
+    background-color:#dededf ;
+    height: 100%;
+}
+
+header .wrapper{
+    width: 92%;
+    margin: 0 auto;
+    padding:1rem 0;
+}
+
+
+.note-container{
+    width: 92%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 1rem;
+}
+
+.note{
+    background: #fff;
+    box-shadow: 3px 2px 10px rgba(0,0,0,0.5);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+
+.note small{
+    display: flex;
+    justify-content: flex-end;
+    text-transform: capitalize;
+    color: #666;
+}
+
+.note h4{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    text-transform: uppercase;
+    margin: 0.5rem 0 0.15rem 0;
+}
+
+.note p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+}
+
+.note .btn{
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0.5rem 0 0;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    transition: all 300ms ease-in-out;
+}
+
+.delete{
+    border: 2.5px solid red;
+    color: red;
+}
+
+.delete:hover{
+    background: red;
+    color: #fff;
+}
+
+.edit{
+    border:2.5px solid green;
+    color: green;
+}
+
+.edit:hover{
+    background: green;
+    color: #fff;
+}
+
+.add-btn{
+    font-size: 1.5rem;
+    font-weight: 100;
+    outline: none;
+    border: none;
+    z-index:5;
+    background: rgb(29, 29, 204);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 2%; 
+    right: 2%;
+    transform: translate(-2%, -2%);
+    transition: all 300ms ease-in-out;
+}
+
+.notepad-container{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 100%;
+    z-index: 50;
+    background: #dededf;
+    background: #f0f0f8;
+    background: khaki;
+    font-family: var(--font1);
+    transition: all 300ms ease-in-out;
+}
+
+.notepad-container.active{
+    right: 0;
+}
+
+.notepad{
+    margin: 0 auto;
+    width: 92%;
+}
+
+#title{
+    margin-bottom: 0.2rem;
+    width: 100%;
+    padding: 0.7rem 0;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: var(--font1);
+    text-transform: capitalize;
+
+    height: auto;
+    max-height:55px;
+    resize: none;
+}
+
+#title::-webkit-scrollbar{
+    width: 0;
+}
+
+
+#title.font{
+    font-family: var(--font2);
+}
+
+#title::placeholder{
+    font-family: var(--font1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#content{
+    width: 100%;
+    height: 75vh;
+    resize: none;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.1rem;
+    font-family: var(--font1);
+}
+
+#content.font{
+    font-family: var(--font2);
+}
+
+#content::placeholder{
+    font-family: var(--font1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.controls{
+    margin: 0.5rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; ;
+    width: 92%;
+    border-radius: 5px;
+}
+
+.control{
+    background: white;
+    background:rgba(250,250,250,0.5);
+    background:rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0rem 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: #333;
+    color: rgba(250,250,250,0.8);
+    margin-bottom: 0.5rem;
+}
+
+.control i{
+    font-size: 1rem;
+}
+
+.control h6{
+   font-family: var(--font1);
+   text-transform: uppercase;
+   letter-spacing: .2px;
+   font-size: 0.7rem;
+   margin-top: 0.2rem;
+}
+
+
+
+
+
+@media (max-width:764px){
+    .note .btn{
+    padding: 0.4rem 0.8rem;
+    margin: 0.5rem 0.5rem 0 0;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 4px;
+    font-size: .9rem;
+    transition: all 300ms ease-in-out;
+}
+}
